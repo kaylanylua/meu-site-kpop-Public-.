@@ -3,45 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fã-clube BTS</title>
+    <title>BTS - Fan Site</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Menu de acessibilidade -->
-    <div class="acessibilidade">
-        <button id="aumentar">A+</button>
-        <button id="diminuir">A-</button>
-        <button id="contraste">Contraste</button>
-    </div>
-
-    <!-- Header -->
+    <!-- Menu -->
     <header>
-        <div class="logo">BTS Fã-clube</div>
-        <nav class="menu">
-            <a href="#inicio">Início</a>
-            <a href="#galeria">Galeria</a>
-            <a href="#contato">Contato</a>
+        <div class="logo">BTS Fan Site</div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
         </nav>
     </header>
 
-    <!-- Banner principal -->
+    <!-- Banner -->
     <section id="inicio" class="banner">
-        <img src="img/banner-bts.jpg" alt="Os sete membros do BTS em apresentação com luzes roxas e azuis">
-        <h1>Bem-vindo ao mundo do BTS!</h1>
+        <img src="img/banner.jpg" alt="Banner do BTS com os membros no palco">
+        <h1>Bem-vindo ao Fan Site do BTS</h1>
     </section>
 
-    <!-- Sobre o BTS -->
+    <!-- Sobre -->
     <section id="sobre">
         <h2>Sobre o BTS</h2>
-        <p>BTS é um grupo de K-pop formado por sete integrantes, conhecido mundialmente por suas músicas, apresentações e engajamento com os fãs.</p>
+        <p>O BTS é um grupo de K-pop sul-coreano formado por sete integrantes. São conhecidos mundialmente por sua música, performances incríveis e mensagens positivas.</p>
     </section>
 
     <!-- Galeria -->
     <section id="galeria">
         <h2>Galeria do BTS</h2>
-        <img src="img/bts1.jpg" alt="Membros do BTS posando para foto oficial">
-        <img src="img/bts2.jpg" alt="BTS em show com iluminação azul e púrpura">
-        <img src="img/bts3.jpg" alt="Integrantes do BTS sorrindo durante evento">
+        <div class="galeria-imagens">
+            <img src="img/bts1.jpg" alt="Os sete membros do BTS em apresentação com luzes roxas e azuis">
+            <img src="img/bts2.jpg" alt="BTS em show com iluminação azul e púrpura">
+            <img src="img/bts3.jpg" alt="Integrantes do BTS sorrindo durante evento">
+        </div>
     </section>
 
     <!-- Contato -->
@@ -51,7 +48,7 @@
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>
 
-            <label for="email">E-mail:</label>
+            <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
 
             <label for="mensagem">Mensagem:</label>
@@ -61,14 +58,10 @@
         </form>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <p>Siga o BTS nas redes sociais!</p>
-        <a href="#">Instagram</a> |
-        <a href="#">Twitter</a> |
-        <a href="#">YouTube</a>
+        <p>© 2025 BTS Fan Site</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

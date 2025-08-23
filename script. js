@@ -1,0 +1,67 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const body = document.body;
+  const html = document.documentElement;
+  const btnA = document.getElementById('aumentar');
+  const btnD = document.getElementById('diminuir');
+  const btnC = document.getElementById('contraste');
+  const ano = document.getElementById('ano');
+  const form = document.getElementById('formContato');
+
+  // persistência
+  const save = (k,v) => localStorage.setItem(k, JSON.stringify(v));
+  const load = (k, d) => {
+    try { return JSON.parse(localStorage.getItem(k)) ?? d } catch { return d }
+  };
+
+  // Fonte base (px)
+  let fontPx = load('bts_font_px', 16);
+  const clamp = (n,min,max) => Math.min(Math.max(n,min),max);
+  function applyFont(n){
+    fontPx = clamp(n,12,24);
+    html.style.fontSize = fontPx + 'px';
+    save('bts_font_px', fontPx);
+  }
+  applyFont(fontPx);
+
+  btnA.addEventListener('click', ()=> applyFont(fontPx + 2));
+  btnD.addEventListener('click', ()=> applyFont(fontPx - 2));
+
+  // Contraste
+  let contrast = load('bts_contrast', false);
+  function applyContrast(on){
+    contrast = !!on;
+    body.classList.toggle('contrast', contrast);
+    btnC.setAttribute('aria-pressed', String(contrast));
+    save('bts_contrast', contrast);
+  }
+  applyContrast(contrast);
+  btnC.addEventListener('click', ()=> applyContrast(!contrast));
+
+  // ano no footer
+  if(ano) ano.textContent = new Date().getFullYear();
+
+  // reveal (entrada) respeitando prefers-reduced-motion
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!prefersReduced && 'IntersectionObserver' in window){
+    const obs = new IntersectionObserver((entries, ob) => {
+      entries.forEach(e => {
+        if(e.isIntersecting){
+          e.target.classList.add('on');
+          ob.unobserve(e.target);
+        }
+      });
+    }, {threshold: 0.15});
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('on'));
+  }
+
+  // Form: exemplo de prevenção de envio real (só demo)
+  if(form){
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Formulário enviado (demo). Conteúdo gravado localmente apenas para demonstração.');
+      form.reset();
+    });
+  }
+});

@@ -1,0 +1,24 @@
+// Selecionando elementos
+const aumentar = document.getElementById("aumentar");
+const diminuir = document.getElementById("diminuir");
+const contraste = document.getElementById("contraste");
+const body = document.body;
+
+// Aumentar fonte
+aumentar.addEventListener("click", () => {
+    let estilo = window.getComputedStyle(body, null).getPropertyValue('font-size');
+    let tamanho = parseFloat(estilo);
+    body.style.fontSize = (tamanho + 2) + "px";
+});
+
+// Diminuir fonte
+diminuir.addEventListener("click", () => {
+    let estilo = window.getComputedStyle(body, null).getPropertyValue('font-size');
+    let tamanho = parseFloat(estilo);
+    body.style.fontSize = (tamanho - 2) + "px";
+});
+
+// Alternar contraste alto
+contraste.addEventListener("click", () => {
+    body.classList.toggle("contraste-alto");
+});

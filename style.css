@@ -1,0 +1,68 @@
+:root{
+  --bg: #0c0c10;
+  --fg: #ffffff;
+  --muted: #cfcfe6;
+  --bts-purple: #7b3fbf; /* tom roxo inspirativo */
+  --card: #14141a;
+  --radius: 12px;
+
+  /* alto contraste */
+  --hc-bg: #000000;
+  --hc-fg: #ffff00;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,#0f0f14 0%, var(--bg) 100%);
+  color:var(--fg);
+  font-size:16px;
+  line-height:1.5;
+  scroll-behavior:smooth;
+}
+
+/* skip link */
+.skip-link{position:absolute;left:-9999px;top:auto}
+.skip-link:focus{left:8px;top:8px;z-index:9999;background:var(--bts-purple);color:#fff;padding:8px;border-radius:6px}
+
+/* toolbar */
+.toolbar{position:fixed;right:12px;top:12px;display:flex;gap:8px;z-index:999}
+.toolbar button{background:var(--card);color:var(--fg);border:0;padding:8px 10px;border-radius:8px;cursor:pointer}
+.toolbar button:focus{outline:3px solid var(--bts-purple);outline-offset:3px}
+
+/* header */
+.site-header{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;position:sticky;top:0;background:rgba(10,10,12,0.6);backdrop-filter:blur(6px)}
+.menu{list-style:none;display:flex;gap:12px;margin:0;padding:0}
+.menu a{color:var(--fg);text-decoration:none;padding:6px 8px;border-radius:8px}
+.menu a:focus, .menu a:hover{background:#222}
+
+/* sections */
+main{max-width:1100px;margin:20px auto;padding:0 16px}
+section{margin:28px 0;padding:18px;border-radius:12px}
+.hero{background:linear-gradient(90deg, rgba(123,63,191,0.08), rgba(123,63,191,0.02));text-align:center}
+h1,h2{margin-bottom:12px}
+.btn{display:inline-block;padding:8px 12px;border-radius:999px;background:linear-gradient(90deg,var(--bts-purple),#b07cff);color:#000;text-decoration:none;border:0}
+
+/* grid da galeria */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+figure{background:var(--card);padding:10px;border-radius:10px}
+img{width:100%;height:auto;border-radius:8px;display:block}
+
+/* forms */
+form{display:grid;gap:10px;max-width:480px}
+input{padding:10px;border-radius:8px;border:1px solid #2a2a36;background:#101017;color:var(--fg)}
+
+/* reveal (entrada) */
+.reveal{opacity:0;transform:translateY(10px)}
+.reveal.on{opacity:1;transform:none;transition:opacity .5s ease, transform .5s ease}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+
+/* contraste alto */
+body.contrast{
+  background:var(--hc-bg);
+  color:var(--hc-fg);
+}
+body.contrast .toolbar button{background:#000;color:var(--hc-fg)}
+body.contrast a, body.contrast .btn{background:var(--hc-fg);color:#000}

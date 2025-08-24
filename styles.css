@@ -3,14 +3,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
-/* Corpo da página */
 body {
-    background-color: #f9f9f9;
-    color: #222;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
 }
 
 /* Cabeçalho */
@@ -18,136 +17,168 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
-    background-color: #121212;
+    background-color: #1e1e1e;
     color: #fff;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    padding: 15px 20px;
 }
 
 header .logo {
-    font-size: 24px;
+    font-size: 1.5em;
     font-weight: bold;
 }
 
 header nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
 header nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
 }
 
-header nav ul li a:hover {
-    color: #f50057; /* Cor rosa para hover */
-}
-
-/* Banner de boas-vindas */
+/* Banner inicial */
 .banner {
-    height: 300px;
-    background: linear-gradient(to right, #8e2de2, #4a00e0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
     text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
 }
 
 .banner h1 {
-    font-size: 36px;
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
-/* Seção Galeria */
+/* Seção Sobre */
+#sobre {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+#sobre h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #1e1e1e;
+}
+
+/* Galeria */
 #galeria {
-    padding: 50px 20px;
-    text-align: center;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
 }
 
 #galeria h2 {
+    font-size: 2em;
     margin-bottom: 30px;
-    font-size: 28px;
-    color: #121212;
+    color: #1e1e1e;
 }
 
-.galeria-imagens {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+/* Fotos em grupo lado a lado */
+.foto-grupo {
+    display: flex;
+    align-items: center;
     gap: 20px;
-}
-
-.galeria-imagens img {
-    width: 100%;
-    height: auto;
+    margin-bottom: 40px;
+    background-color: #fff;
+    padding: 20px;
     border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: pointer;
 }
 
-.galeria-imagens img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+.foto-grupo img {
+    width: 45%;
+    border-radius: 10px;
 }
 
-/* Seção Contato */
+.foto-grupo .descricao {
+    width: 55%;
+}
+
+/* Fotos individuais: texto abaixo */
+.foto-individual {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.foto-individual img {
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Contato */
 #contato {
-    padding: 50px 20px;
-    background-color: #ececec;
+    padding: 40px 20px;
+    max-width: 600px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 10px;
 }
 
 #contato h2 {
-    margin-bottom: 30px;
-    font-size: 28px;
-    color: #121212;
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+#contato form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
 }
 
-form input, form textarea {
+#contato form input,
+#contato form textarea {
+    width: 100%;
     padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
 }
 
-form button {
-    padding: 12px;
+#contato form button {
+    margin-top: 15px;
+    padding: 10px 20px;
     border: none;
+    background-color: #6a11cb;
+    color: white;
+    font-weight: bold;
     border-radius: 5px;
-    background-color: #4a00e0;
-    color: #fff;
-    font-size: 18px;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-form button:hover {
-    background-color: #8e2de2;
+#contato form button:hover {
+    background-color: #2575fc;
 }
 
-/* Rodapé */
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #121212;
+    background-color: #1e1e1e;
     color: #fff;
+    margin-top: 40px;
 }
 
 /* Responsivo */
 @media (max-width: 768px) {
-    header {
+    .foto-grupo {
         flex-direction: column;
-        gap: 10px;
     }
-}
+
+    .foto-grupo img,
+    .foto-grupo .descricao {
+        width: 100%;
+    }
+
+    .foto-individual img {
+        width: 100%;
+    }
+    }

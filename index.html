@@ -1,56 +1,134 @@
-<section id="galeria">
-    <h2>Galeria do BTS</h2>
-    
-    <!-- Foto 1: Grupo (imagem à esquerda, texto à direita) -->
-    <div class="foto-grupo">
-        <img src="img/bts1.jpg" alt="Foto do BTS em grupo, capa de revista ou ensaio">
-        <div class="descricao">
-            <p>O BTS é formado por RM, Jin, Suga, J-Hope, Jimin, V e Jungkook. Eles conquistaram fãs globalmente com suas músicas, coreografias e mensagens inspiradoras.</p>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTS - Fan Site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Menu de Acessibilidade -->
+    <div class="acessibilidade">
+        <button id="aumentar">A+</button>
+        <button id="diminuir">A-</button>
+        <button id="contraste">⚪⚫</button>
+    </div>
+
+    <!-- Cabeçalho / Menu -->
+    <header>
+        <div class="logo">BTS Fan Site</div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção Inicial -->
+    <section id="inicio" class="banner">
+        <h1>Bem-vindo ao Fan Site do BTS</h1>
+        <p>Descubra o mundo do K-pop e conheça tudo sobre o BTS, um dos maiores grupos do gênero!</p>
+    </section>
+
+    <!-- Seção Sobre o BTS e K-pop -->
+    <section id="sobre">
+        <h2>Sobre o BTS e o K-pop</h2>
+        <p>
+            O BTS é um grupo sul-coreano de K-pop formado em 2013. Composto por sete integrantes – RM, Jin, Suga, J-Hope, Jimin, V e Jungkook –, 
+            o grupo ganhou fama mundial por suas músicas, coreografias e mensagens inspiradoras.
+        </p>
+        <p>
+            K-pop é a abreviação de Korean Pop, um gênero musical da Coreia do Sul que mistura pop, hip hop, R&B e eletrônica, 
+            conhecido pelo visual colorido, coreografias detalhadas e grande interação com os fãs.
+        </p>
+        <p>
+            O BTS realizou shows internacionais, lançou álbuns de sucesso e participou de campanhas sociais, como “Love Myself”, promovendo amor próprio e solidariedade.
+        </p>
+    </section>
+
+    <!-- Galeria de Imagens -->
+    <section id="galeria">
+        <h2>Galeria do BTS</h2>
+        
+        <!-- Foto 1: Grupo -->
+        <div class="foto-grupo">
+            <img src="img/bts1.jpg" alt="Foto do BTS em grupo, capa de revista ou ensaio">
+            <div class="descricao">
+                <p>O BTS é formado por RM, Jin, Suga, J-Hope, Jimin, V e Jungkook. Eles conquistaram fãs globalmente com suas músicas, coreografias e mensagens inspiradoras.</p>
+            </div>
         </div>
-    </div>
 
-    <!-- Foto 2: Grupo em show (imagem à esquerda, texto à direita) -->
-    <div class="foto-grupo">
-        <img src="img/bts2.jpg" alt="BTS em grupo, performance no palco, fundo roxo">
-        <div class="descricao">
-            <p>O BTS se apresenta em shows cheios de energia, encantando fãs com coreografias perfeitas e interação com o público. A foto mostra a vibração do grupo durante uma apresentação.</p>
+        <!-- Foto 2: Grupo em show -->
+        <div class="foto-grupo">
+            <img src="img/bts2.jpg" alt="BTS em grupo, performance no palco, fundo roxo">
+            <div class="descricao">
+                <p>O BTS se apresenta em shows cheios de energia, encantando fãs com coreografias perfeitas e interação com o público. A foto mostra a vibração do grupo durante uma apresentação.</p>
+            </div>
         </div>
-    </div>
 
-    <!-- Fotos individuais: texto abaixo da imagem -->
-    <div class="foto-individual">
-        <img src="img/j-hope.jpg" alt="J-Hope cantando em show, fundo vermelho">
-        <p>J-Hope (Jung Ho-seok) é rapper e dançarino do BTS. Nascido em 1994, começou como dançarino de rua. Conhecido por sua energia contagiante, participa da composição de músicas e mantém uma relação próxima com os fãs. Gosta de dança e atividades artísticas.</p>
-    </div>
+        <!-- Fotos individuais -->
+        <div class="foto-individual">
+            <img src="img/j-hope.jpg" alt="J-Hope cantando em show, fundo vermelho">
+            <p>J-Hope (Jung Ho-seok) é rapper e dançarino do BTS. Nascido em 1994, começou como dançarino de rua. Conhecido por sua energia contagiante, participa da composição de músicas e mantém uma relação próxima com os fãs. Gosta de dança e atividades artísticas.</p>
+        </div>
 
-    <div class="foto-individual">
-        <img src="img/jimin.jpg" alt="Jimin cantando em show, roupa e cabelo brancos">
-        <p>Jimin (Park Ji-min) é vocalista e dançarino do BTS. Nascido em 1995, estudou dança contemporânea antes de ser cantor. É conhecido por suas performances emocionantes e carisma com os fãs. Gosta de cuidar da voz e da dança.</p>
-    </div>
+        <div class="foto-individual">
+            <img src="img/jimin.jpg" alt="Jimin cantando em show, roupa e cabelo brancos">
+            <p>Jimin (Park Ji-min) é vocalista e dançarino do BTS. Nascido em 1995, estudou dança contemporânea antes de ser cantor. É conhecido por suas performances emocionantes e carisma com os fãs. Gosta de cuidar da voz e da dança.</p>
+        </div>
 
-    <div class="foto-individual">
-        <img src="img/jin.jpg" alt="Jin feliz cantando em show, fundo roxo">
-        <p>Jin (Kim Seok-jin), vocalista e o integrante mais velho do BTS, nasceu em 1992. É conhecido pelo senso de humor, voz marcante e jeito carinhoso com os fãs. Fora do palco, gosta de cozinhar e criar conteúdos divertidos.</p>
-    </div>
+        <div class="foto-individual">
+            <img src="img/jin.jpg" alt="Jin feliz cantando em show, fundo roxo">
+            <p>Jin (Kim Seok-jin), vocalista e o integrante mais velho do BTS, nasceu em 1992. É conhecido pelo senso de humor, voz marcante e jeito carinhoso com os fãs. Fora do palco, gosta de cozinhar e criar conteúdos divertidos.</p>
+        </div>
 
-    <div class="foto-individual">
-        <img src="img/jungkook.jpg" alt="Jungkook em show no Brasil, com a bandeira do Brasil">
-        <p>Jungkook (Jeon Jung-kook) é vocalista, dançarino e o maknae do BTS. Nascido em 1997, começou a cantar e dançar ainda jovem. Além de shows internacionais, gosta de esportes, fotografia e composições musicais.</p>
-    </div>
+        <div class="foto-individual">
+            <img src="img/jungkook.jpg" alt="Jungkook em show no Brasil, com a bandeira do Brasil">
+            <p>Jungkook (Jeon Jung-kook) é vocalista, dançarino e o maknae do BTS. Nascido em 1997, começou a cantar e dançar ainda jovem. Além de shows internacionais, gosta de esportes, fotografia e composições musicais.</p>
+        </div>
 
-    <div class="foto-individual">
-        <img src="img/rm.jpg" alt="RM cantando em show, fundo azul">
-        <p>RM (Kim Nam-joon) é líder e rapper principal do BTS. Nascido em 1994, escreve grande parte das músicas do grupo. É conhecido por sua inteligência, liderança e discursos inspiradores. Fora do palco, gosta de leitura, arte e projetos musicais solo.</p>
-    </div>
+        <div class="foto-individual">
+            <img src="img/rm.jpg" alt="RM cantando em show, fundo azul">
+            <p>RM (Kim Nam-joon) é líder e rapper principal do BTS. Nascido em 1994, escreve grande parte das músicas do grupo. É conhecido por sua inteligência, liderança e discursos inspiradores. Fora do palco, gosta de leitura, arte e projetos musicais solo.</p>
+        </div>
 
-    <div class="foto-individual">
-        <img src="img/suga.jpg" alt="Suga cantando em show, mão no fone do ouvido">
-        <p>Suga (Min Yoon-gi) é rapper e produtor musical do BTS. Nascido em 1993, começou a compor músicas ainda jovem. Conhecido por sua personalidade calma, também tem projetos solo e gosta de escrever letras e compor músicas fora do grupo.</p>
-    </div>
+        <div class="foto-individual">
+            <img src="img/suga.jpg" alt="Suga cantando em show, mão no fone do ouvido">
+            <p>Suga (Min Yoon-gi) é rapper e produtor musical do BTS. Nascido em 1993, começou a compor músicas ainda jovem. Conhecido por sua personalidade calma, também tem projetos solo e gosta de escrever letras e compor músicas fora do grupo.</p>
+        </div>
 
-    <div class="foto-individual">
-        <img src="img/v.jpg" alt="V fazendo pose para tirar uma foto">
-        <p>V (Kim Tae-hyung) é vocalista e dançarino do BTS. Nascido em 1995, se destaca por sua voz profunda e estilo único. Fora do palco, gosta de fotografia, artes visuais e moda.</p>
-    </div>
+        <div class="foto-individual">
+            <img src="img/v.jpg" alt="V fazendo pose para tirar uma foto">
+            <p>V (Kim Tae-hyung) é vocalista e dançarino do BTS. Nascido em 1995, se destaca por sua voz profunda e estilo único. Fora do palco, gosta de fotografia, artes visuais e moda.</p>
+        </div>
 
-            </section>            
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato">
+        <h2>Contato</h2>
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 BTS Fan Site</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+    </html>
+        

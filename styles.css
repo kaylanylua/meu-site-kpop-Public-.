@@ -1,87 +1,76 @@
+/* styles.css */
+
 /* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Estilo do body */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f5f5f5;
-    color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
 }
 
-/* Cabeçalho */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #1e1e1e;
-    color: #fff;
-    padding: 15px 20px;
+/* Títulos */
+h2, h3 {
+  color: #5a2d82; /* Roxo suave, remetendo ao BTS */
+  margin-bottom: 10px;
 }
 
-header .logo {
-    font-size: 1.5em;
-    font-weight: bold;
+/* Container principal */
+#conteudo {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
+/* Cada bloco de foto + texto */
+.bloco-foto {
+  display: flex;
+  align-items: center;
+  margin: 25px 0;
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
 }
 
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+.bloco-foto:hover {
+  transform: scale(1.02);
 }
 
-/* Banner inicial */
-.banner {
-    text-align: center;
-    padding: 50px 20px;
-    background: linear-gradient(to right, #6a11cb, #2575fc);
-    color: white;
+/* Imagem */
+.bloco-foto img {
+  width: 220px;   /* tamanho médio */
+  height: auto;
+  border-radius: 12px;
+  margin-right: 20px;
 }
 
-.banner h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+/* Texto ao lado da imagem */
+.bloco-foto div {
+  flex: 1;
 }
 
-/* Seção Sobre */
-#sobre {
-    padding: 40px 20px;
-    max-width: 1000px;
-    margin: auto;
+/* Parágrafos */
+p {
+  margin-bottom: 8px;
+  text-align: justify;
 }
 
-#sobre h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #1e1e1e;
+/* Contato */
+#conteudo > div:last-child {
+  margin-top: 40px;
+  padding: 20px;
+  background: #e9e3f7;
+  border-radius: 12px;
 }
 
-/* Galeria */
-#galeria {
-    padding: 40px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-#galeria h2 {
-    font-size: 2em;
-    margin-bottom: 30px;
-    color: #1e1e1e;
-}
-
-/* Fotos em grupo lado a lado */
-.foto-grupo {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 40px;
-    background-color: #fff
+#conteudo > div:last-child h3 {
+  color: #2c185b;
+    }    

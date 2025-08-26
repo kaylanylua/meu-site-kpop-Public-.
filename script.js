@@ -1,4 +1,4 @@
-// script.js
+  // script.js
 
 // Fotos principais (grupo e show)
 const fotosPrincipais = [
@@ -97,7 +97,12 @@ const integrantes = [
 ];
 
 // Contato
-const contato = `<h3>Contato</h3><p>Nome: Kaylany Luana</p><p>Email: kaylany@example.com</p>`;
+const contato = `
+<h3>Contato</h3>
+<p>Nome: Kaylany Luana</p>
+<p>Email: kaylany@example.com</p>
+<p>Data de lançamento: 26/08/2025</p>
+`;
 
 // Função para criar card
 function criarCard(foto) {
@@ -127,8 +132,25 @@ fotosPrincipais.forEach(foto => conteudo.appendChild(criarCard(foto)));
 // Integrantes
 integrantes.forEach(integ => conteudo.appendChild(criarCard(integ)));
 
+// Vídeo sobre K-pop
+const videoDiv = document.createElement("div");
+videoDiv.className = "video-kpop";
+
+const video = document.createElement("video");
+video.width = 560;
+video.height = 315;
+video.controls = true;
+
+const source = document.createElement("source");
+source.src = "videos/k-pop.mp4";
+source.type = "video/mp4";
+
+video.appendChild(source);
+videoDiv.appendChild(video);
+conteudo.appendChild(videoDiv);
+
 // Contato
 const contatoDiv = document.createElement("div");
 contatoDiv.className = "contato";
 contatoDiv.innerHTML = contato;
-conteudo.appendChild(contatoDiv);
+conteudo.appendChild(contatoDiv);  

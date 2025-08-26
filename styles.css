@@ -8,59 +8,76 @@
 /* Fundo do site */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #ede7f6; /* roxo bem clarinho */
+  background-color: #ede7f6; /* roxo claro */
   color: #333;
   line-height: 1.6;
   padding: 20px;
 }
 
-/* Títulos */
-h2, h3 {
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
   color: #5a2d82;
   margin-bottom: 10px;
 }
 
-/* Container */
-#conteudo {
-  max-width: 900px;
+header p {
+  max-width: 800px;
   margin: 0 auto;
+  font-size: 1rem;
 }
 
-/* Blocos em formato de card */
-.bloco-foto {
+/* Container principal */
+#conteudo {
+  max-width: 1000px;
+  margin: 0 auto;
   display: flex;
-  align-items: center;
-  margin: 25px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Card */
+.card {
   background: #ffffff;
-  padding: 20px;
-  border-radius: 12px;
   border: 2px solid #d1c4e9;
+  border-radius: 12px;
+  width: 250px;
+  text-align: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.bloco-foto:hover {
-  transform: scale(1.02);
+.card:hover {
+  transform: scale(1.05);
   box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
-/* Imagens */
-.bloco-foto img {
-  width: 220px;
-  height: auto;
-  border-radius: 10px;
-  margin-right: 20px;
+/* Card destaque (grupo e show) */
+.card.destaque {
+  width: 540px; /* maior que os outros cards */
 }
 
-/* Texto */
-.bloco-foto div {
-  flex: 1;
+/* Imagem */
+.card img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
-/* Parágrafos */
-p {
-  margin-bottom: 8px;
-  text-align: justify;
+/* Informações do card */
+.card-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-info h3 {
+  color: #5a2d82;
+  margin-bottom: 10px;
 }
 
 /* Contato */
@@ -70,7 +87,9 @@ p {
   background: #d1c4e9;
   border-radius: 12px;
   border: 2px solid #b39ddb;
+  text-align: center;
 }
 .contato h3 {
   color: #2c185b;
-}
+  margin-bottom: 10px;
+  }

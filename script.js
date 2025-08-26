@@ -74,4 +74,4 @@ conteudo.appendChild(videoDiv);
 const contatoDiv = document.createElement("div");
 contatoDiv.className = "contato";
 contatoDiv.innerHTML = contato;
-conteudo.appendChild(contatoDiv);    
+conteudo.appendChild(contatoDiv);

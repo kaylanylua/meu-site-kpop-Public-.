@@ -1,14 +1,18 @@
-  /* Reset */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Fundo do site */
+/* Fundo do site com marca d'água K-pop */
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #ede7f6; /* roxo claro */
+  background-image: url('img/kpop-bg.png'); /* símbolo K-pop */
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 80px 80px;
   color: #333;
   line-height: 1.6;
   padding: 20px;
@@ -59,7 +63,7 @@ header p {
 
 /* Card destaque (grupo e show) */
 .card.destaque {
-  width: 540px; /* maior que os outros cards */
+  width: 540px;
 }
 
 /* Imagem */
@@ -92,4 +96,4 @@ header p {
 .contato h3 {
   color: #2c185b;
   margin-bottom: 10px;
-}
+  }

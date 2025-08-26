@@ -1,4 +1,4 @@
-// script.js
+    // script.js
 
 // Informações iniciais sobre K-pop
 const kpopInfo = `
@@ -11,10 +11,10 @@ const kpopInfo = `
   </p>
 `;
 
-// Informações das duas primeiras fotos
+// Fotos principais
 const fotosPrincipais = [
   {
-    src: "bts1.jpg",
+    src: "img/bts1.jpg",
     alt: "BTS em grupo",
     info: `
       <h3>Sobre o grupo</h3>
@@ -26,7 +26,7 @@ const fotosPrincipais = [
     `
   },
   {
-    src: "bts2.jpg",
+    src: "img/bts2.jpg",
     alt: "BTS em show",
     info: `
       <h3>Um dia de show</h3>
@@ -39,10 +39,10 @@ const fotosPrincipais = [
   }
 ];
 
-// Informações dos integrantes
+// Integrantes
 const integrantes = [
   {
-    src: "rm.jpg",
+    src: "img/rm.jpg",
     alt: "RM",
     info: `
       <h3>RM (Kim Namjoon)</h3>
@@ -54,7 +54,7 @@ const integrantes = [
     `
   },
   {
-    src: "jin.jpg",
+    src: "img/jin.jpg",
     alt: "Jin",
     info: `
       <h3>Jin (Kim Seokjin)</h3>
@@ -66,7 +66,7 @@ const integrantes = [
     `
   },
   {
-    src: "suga.jpg",
+    src: "img/suga.jpg",
     alt: "Suga",
     info: `
       <h3>Suga (Min Yoongi)</h3>
@@ -78,7 +78,7 @@ const integrantes = [
     `
   },
   {
-    src: "jhope.jpg",
+    src: "img/jhope.jpg",
     alt: "J-Hope",
     info: `
       <h3>J-Hope (Jung Hoseok)</h3>
@@ -90,7 +90,7 @@ const integrantes = [
     `
   },
   {
-    src: "jimin.jpg",
+    src: "img/jimin.jpg",
     alt: "Jimin",
     info: `
       <h3>Jimin (Park Jimin)</h3>
@@ -102,7 +102,7 @@ const integrantes = [
     `
   },
   {
-    src: "v.jpg",
+    src: "img/v.jpg",
     alt: "V",
     info: `
       <h3>V (Kim Taehyung)</h3>
@@ -114,7 +114,7 @@ const integrantes = [
     `
   },
   {
-    src: "jungkook.jpg",
+    src: "img/jungkook.jpg",
     alt: "Jungkook",
     info: `
       <h3>Jungkook (Jeon Jungkook)</h3>
@@ -127,30 +127,49 @@ const integrantes = [
   }
 ];
 
-// Informações de contato
+// Contato
 const contato = `
   <h3>Contato</h3>
   <p>Nome: Kaylany Luana</p>
   <p>Email: kaylany@example.com</p>
 `;
 
-// Função para criar cada bloco de foto + informação
-function criarBlocoFoto(foto, esquerda = true) {
+// Função para criar os blocos
+function criarBlocoFoto(foto) {
   const div = document.createElement("div");
   div.className = "bloco-foto";
-  div.style.display = "flex";
-  div.style.margin = "20px 0";
-  div.style.alignItems = "center";
 
   const img = document.createElement("img");
   img.src = foto.src;
   img.alt = foto.alt;
-  img.style.width = "220px"; // tamanho médio
-  img.style.height = "auto";
-  img.style.borderRadius = "12px";
-  img.style.marginRight = esquerda ? "20px" : "0";
-  img.style.marginLeft = esquerda ? "0" : "20px";
 
   const infoDiv = document.createElement("div");
   infoDiv.innerHTML = foto.info;
-  infoDiv
+
+  div.appendChild(img);
+  div.appendChild(infoDiv);
+
+  return div;
+}
+
+// Seleciona o container principal
+const conteudo = document.getElementById("conteudo");
+
+// Adiciona K-pop info
+conteudo.innerHTML += kpopInfo;
+
+// Adiciona fotos principais
+fotosPrincipais.forEach(foto => {
+  conteudo.appendChild(criarBlocoFoto(foto));
+});
+
+// Adiciona integrantes
+integrantes.forEach(integ => {
+  conteudo.appendChild(criarBlocoFoto(integ));
+});
+
+// Adiciona contato
+const contatoDiv = document.createElement("div");
+contatoDiv.className = "contato";
+contatoDiv.innerHTML = contato;
+conteudo.appendChild(contatoDiv);

@@ -1,18 +1,18 @@
-   /* Reset */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Fundo do site com marca d'água K-pop */
+/* Fundo do site com bandeira da Coreia */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #ede7f6; /* roxo claro */
-  background-image: url('img/kpop-bg.png'); /* símbolo K-pop */
+  background-color: #ffffff;
+  background-image: url('img/kpop-bg.png'); /* substitua pela bandeira da Coreia */
   background-repeat: repeat;
   background-position: center;
-  background-size: 80px 80px;
+  background-size: 150px 150px;
   color: #333;
   line-height: 1.6;
   padding: 20px;
@@ -84,6 +84,19 @@ header p {
   margin-bottom: 10px;
 }
 
+/* Vídeo */
+.video-kpop {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.video-kpop video {
+  border-radius: 12px;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
 /* Contato */
 .contato {
   margin-top: 40px;
@@ -93,7 +106,8 @@ header p {
   border: 2px solid #b39ddb;
   text-align: center;
 }
+
 .contato h3 {
   color: #2c185b;
   margin-bottom: 10px;
-  } 
+   }

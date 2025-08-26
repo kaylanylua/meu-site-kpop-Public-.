@@ -1,16 +1,14 @@
-/* styles.css */
-
-/* Reset básico */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Estilo do body */
+/* Fundo do site */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #f9f9f9;
+  background-color: #ede7f6; /* roxo bem clarinho */
   color: #333;
   line-height: 1.6;
   padding: 20px;
@@ -18,41 +16,43 @@ body {
 
 /* Títulos */
 h2, h3 {
-  color: #5a2d82; /* Roxo suave, remetendo ao BTS */
+  color: #5a2d82;
   margin-bottom: 10px;
 }
 
-/* Container principal */
+/* Container */
 #conteudo {
   max-width: 900px;
   margin: 0 auto;
 }
 
-/* Cada bloco de foto + texto */
+/* Blocos em formato de card */
 .bloco-foto {
   display: flex;
   align-items: center;
   margin: 25px 0;
-  background: #fff;
-  padding: 15px;
+  background: #ffffff;
+  padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  border: 2px solid #d1c4e9;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .bloco-foto:hover {
   transform: scale(1.02);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
-/* Imagem */
+/* Imagens */
 .bloco-foto img {
-  width: 220px;   /* tamanho médio */
+  width: 220px;
   height: auto;
-  border-radius: 12px;
+  border-radius: 10px;
   margin-right: 20px;
 }
 
-/* Texto ao lado da imagem */
+/* Texto */
 .bloco-foto div {
   flex: 1;
 }
@@ -64,13 +64,13 @@ p {
 }
 
 /* Contato */
-#conteudo > div:last-child {
+.contato {
   margin-top: 40px;
   padding: 20px;
-  background: #e9e3f7;
+  background: #d1c4e9;
   border-radius: 12px;
+  border: 2px solid #b39ddb;
 }
-
-#conteudo > div:last-child h3 {
+.contato h3 {
   color: #2c185b;
-    }    
+    }

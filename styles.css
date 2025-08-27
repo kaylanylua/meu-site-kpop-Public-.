@@ -1,33 +1,113 @@
-*{margin:0;padding:0;box-sizing:border-box;}
-body{
-  font-family: Arial, Helvetica, sans-serif;
-  background-color:#fff;
-  background-image:url('img/coreia.png');
-  background-repeat:repeat;
-  background-size:150px 150px;
-  color:#333;
-  line-height:1.6;
-  padding:20px;
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-header{text-align:center;margin-bottom:30px;}
-header h1{color:#5a2d82;margin-bottom:10px;}
-header p{max-width:800px;margin:0 auto;font-size:1rem;}
-#conteudo{max-width:1000px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:20px;}
-.card{
-  background:#fff;
-  border:2px solid #d1c4e9;
-  border-radius:12px;
-  width:250px;
-  text-align:center;
-  box-shadow:0 4px 10px rgba(0,0,0,0.08);
+
+/* Corpo do site com fundo da bandeira da Coreia */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+
+  background-image: url('img/coreia.png'); /* bandeira da Coreia do Sul */
+  background-repeat: repeat;               /* repete a bandeira pelo fundo */
+  background-position: center;
+  background-size: 150px 150px;           /* tamanho ajustado da bandeira */
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  color: #5a2d82;
+  margin-bottom: 10px;
+}
+
+header p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+/* Container principal */
+#conteudo {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Cards (grupo, show e integrantes) */
+.card {
+  background: #ffffff;                     /* fundo branco para contraste */
+  border: 2px solid #d1c4e9;
+  border-radius: 12px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.card:hover{transform:scale(1.05);box-shadow:0 6px 15px rgba(0,0,0,0.15);}
-.card.destaque{width:540px;}
-.card img{width:100%;border-top-left-radius:10px;border-top-right-radius:10px;}
-.card-info{padding:15px;text-align:center;}
-.card-info h3{color:#5a2d82;margin-bottom:10px;}
-.video-kpop{text-align:center;margin:30px 0;}
-.video-kpop video{border-radius:12px;max-width:100%;height:auto;box-shadow:0 4px 10px rgba(0,0,0,0.2);}
-.contato{margin-top:40px;padding:20px;background:#d1c4e9;border-radius:12px;border:2px solid #b39ddb;text-align:center;}
-.contato h3{color:#2c185b;margin-bottom:10px;}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Cards principais (grupo e show) maiores */
+.card.destaque {
+  width: 540px;
+}
+
+/* Imagens dos cards */
+.card img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Informações dentro dos cards */
+.card-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.card-info h3 {
+  color: #5a2d82;
+  margin-bottom: 10px;
+}
+
+/* Vídeo sobre K-pop */
+.video-kpop {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.video-kpop video {
+  border-radius: 12px;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Contato */
+.contato {
+  margin-top: 40px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 2px solid #b39ddb;
+  text-align: center;
+}
+
+.contato h3 {
+  color: #2c185b;
+  margin-bottom: 10px;
+}
